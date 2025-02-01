@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name" translatable="false">BaseAd</string>
+
+    <!--region Demo Screen-->
+
+    <!--endregion-->
+
+    <!--region OnBoard Screen-->
+    <string name="onboard_navigate_text" translatable="false">Next</string>
+    <string name="onboard_navigate_text_end" translatable="false">Get Started</string>
+    <!--endregion-->
+
+    <!--region Ads & Sub-->
+    <string name="more_app" translatable="false">https://play.google.com/store/apps/developer?id=Technology+Product+and+Service</string>
+    <string-array name="group_email">
+        <item>gsx.service268@gmail.com</item>
+    </string-array>
+
+    <string name="tv_year_title_des" translatable="false"><b>Start Free Trial and Plan</b></string>
+    <string name="tv_year_3_days_free_trial_then" translatable="false">Try 3 days for free then</string>
+    <string name="tv_year_price" translatable="false"><b>đ1,000,000/year</b></string>
+    <string name="tv_year_price_sale" translatable="false"><b>đ1,000,000/year</b></string>
+
+    <string name="tv_year_title" translatable="false"><b>Yearly</b></string>
+
+    <string name="tv_week_title" translatable="false"><b>Weekly</b></string>
+    <string name="tv_week_price" translatable="false"><b>đ500,000/week</b></string>
+
+    <string name="tv_lifetime_title" translatable="false"><b>Lifetime</b></string>
+    <string name="tv_lifetime_des" translatable="false">One-time purchase</string>
+    <string name="tv_lifetime_price" translatable="false"><b>đ2,000,000</b></string>
+
+    <string name="sub_text_list_1" translatable="false">Multiple Schedules</string>
+    <string name="sub_text_list_2" translatable="false">Add unlimited Files: Photo, Video, Document</string>
+    <string name="sub_text_list_3" translatable="false">Notifications to not miss any Events, Tasks</string>
+    <string name="sub_text_list_4" translatable="false">Unlimited Feature</string>
+    <string name="sub_text_list_5" translatable="false">No ads for 7 Days</string>
+
+    <string name="text_terms_of_use" translatable="false"><u>Terms of Use</u></string>
+    <string name="text_privacy_policy" translatable="false"><u>Privacy Policy</u></string>
+    <string name="sub_text_restore" translatable="false"><b>Restore</b></string>
+    <string name="sub_btn_subscribe_now" translatable="false">Subscribe Now</string>
+    <string name="license_key" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqhilXPGzuCihiThMzHdw/XW9TE+Pp9eWDRTuWXTBiYcYtcCfFv7WE98jhEzgWusbp93o+W3NUCeDU3VbVxSOzE/8c4IMoo5pvdJqLQEHJOdX/wRig2BeTdmh0dJ4glQUWvDA7jA9UQIHrHUE8CR30IiDECrNM2Cb6+bbw5QuK+JTxMckBbDzkhlqWfy2KGZX7QkEkTs2EOXSkMwlDo4xF+rjY04n4WR21+WyUtVFCi+byvz3pEt9jJRcA7S5TnpsVqor9/0xPzHLd5egB3gv3Pj9G/BElrfMQ8LlsmcycjjC+SzSzdzKEVlJoqNTbn0CJlax/eYx53iNavHDqnLGIwIDAQAB</string>
+
+
+    <!--  AD Test  -->
+    <string-array name="banner_ad_unit_id" translatable="false">
+        <item>ca-app-pub-3940256099942544/9214589741</item>
+        <item>ca-app-pub-3940256099942544/9214589741</item>
+        <item>ca-app-pub-3940256099942544/9214589741</item>
+    </string-array>
+    <string-array name="interstitial_ad_unit_id" translatable="false">
+        <item>ca-app-pub-3940256099942544/1033173712</item>
+        <item>ca-app-pub-3940256099942544/1033173712</item>
+        <item>ca-app-pub-3940256099942544/1033173712</item>
+    </string-array>
+    <string name="reward_interstitial_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/5354046379</string>
+    <string-array name="reward_ad_unit_id">
+        <item>ca-app-pub-3940256099942544/5224354917</item>
+        <item>ca-app-pub-3940256099942544/5224354917</item>
+        <item>ca-app-pub-3940256099942544/5224354917</item>
+        <item>ca-app-pub-3940256099942544/5224354917</item>
+        <item>ca-app-pub-3940256099942544/5224354917</item>
+    </string-array>
+    <string-array name="native_ad_unit_id" translatable="false">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </string-array>
+    <string-array name="open_ad_unit_id">
+        <item>ca-app-pub-3940256099942544/9257395921</item>
+        <item>ca-app-pub-3940256099942544/9257395921</item>
+        <item>ca-app-pub-3940256099942544/9257395921</item>
+    </string-array>
+    <string name="app_ad_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+    <!--    AD Real-->
+    <!--    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-4608855745095547/9886951818</string>-->
+    <!--    <string-array name="interstitial_ad_unit_id" translatable="false">-->
+    <!--        <item>ca-app-pub-4608855745095547/3513115155</item>-->
+    <!--        <item>ca-app-pub-4608855745095547/3685888434</item>-->
+    <!--        <item>ca-app-pub-4608855745095547/8468475669</item>-->
+    <!--    </string-array>-->
+    <!--    <string name="reward_interstitial_ad_unit_id" translatable="false"></string>-->
+    <!--    <string-array name="reward_ad_unit_id">-->
+    <!--        <item></item>-->
+    <!--    </string-array>-->
+
+    <!--    <string name="native_ad_unit_id" translatable="false">ca-app-pub-4608855745095547/2425811494</string>-->
+    <!--    <string-array name="open_ad_unit_id">-->
+    <!--        <item>ca-app-pub-4608855745095547/6516065902</item>-->
+    <!--        <item>ca-app-pub-4608855745095547/5202984231</item>-->
+    <!--        <item>ca-app-pub-4608855745095547/6382821073</item>-->
+    <!--    </string-array>-->
+    <!--    <string name="app_ad_id" translatable="false">ca-app-pub-4608855745095547~6115227761</string>-->
+
+    <!--  endregion  -->
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="native_container_horizontal_margin">24dp</dimen>
+    <dimen name="native_container_vertical_margin">16dp</dimen>
+    <dimen name="ad_badge_vertical_margin">1dp</dimen>
+    <dimen name="ad_badge_horizontal_margin">8dp</dimen>
+    <color name="ad_call_to_action_color">@color/ad_call_to_action_bg</color>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
