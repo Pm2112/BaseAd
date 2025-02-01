@@ -13,8 +13,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.pdm.basead.databinding.ActivityHomeBinding
 import com.pdm.basead.manager.FileManager
-import com.pdm.basead.utils.ads.AdKeyPosition
-import com.pdm.basead.utils.base.BaseActivity
+import com.pdm.basead.ui.ads.AdKeyPosition
+import com.pdm.basead.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,8 +1,8 @@
-package com.pdm.basead.utils.manager.ad
+package com.pdm.basead.manager.ad
 
 import android.content.Context
-import com.pdm.basead.utils.ads.AdKeyPosition
-import com.pdm.basead.utils.SharedPreferencesOwner
+import com.pdm.basead.ui.ads.AdKeyPosition
+import com.pdm.basead.base.SharedPreferencesOwner
 import gs.ad.utils.ads.AdmManager
 import gs.ad.utils.utils.PreferencesManager
 

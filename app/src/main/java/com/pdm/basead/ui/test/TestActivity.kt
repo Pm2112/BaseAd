@@ -10,7 +10,7 @@ import com.pdm.basead.api.ApiRepository
 import com.pdm.basead.api.ApiService
 import com.pdm.basead.api.RetrofitClient
 import com.pdm.basead.databinding.ActivityTestBinding
-import com.pdm.basead.utils.base.BaseActivity
+import com.pdm.basead.base.BaseActivity
 
 class TestActivity : BaseActivity() {
     private lateinit var _binding: ActivityTestBinding

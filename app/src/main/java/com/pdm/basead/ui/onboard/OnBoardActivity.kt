@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.pdm.basead.AppOwner
-import com.pdm.basead.utils.ads.AdKeyPosition
+import com.pdm.basead.ui.ads.AdKeyPosition
 import com.pdm.basead.databinding.ActivityOnboardBinding
 import gs.ad.utils.ads.AdmManager
 import gs.ad.utils.ads.OnAdmListener

@@ -1,11 +1,11 @@
-package com.pdm.basead.utils.base
+package com.pdm.basead.base
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.pdm.basead.AppOwner
-import com.pdm.basead.utils.sub.MyProductId
+import com.pdm.basead.ui.sub.MyProductId
 import gs.ad.utils.google_iab.BillingClientLifecycle
 import gs.ad.utils.google_iab.OnBillingListener
 import gs.ad.utils.google_iab.enums.ErrorType

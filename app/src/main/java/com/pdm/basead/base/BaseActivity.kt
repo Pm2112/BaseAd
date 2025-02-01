@@ -1,4 +1,4 @@
-package com.pdm.basead.utils.base
+package com.pdm.basead.base
 
 import android.app.Activity
 import android.content.Intent
@@ -17,12 +17,12 @@ import com.pdm.basead.AppOwner
 import com.pdm.basead.MainActivity
 import com.pdm.basead.R
 import com.pdm.basead.SubscriptionActivity
-import com.pdm.basead.utils.ads.AdKeyPosition
-import com.pdm.basead.utils.manager.ad.AdBannerManager
-import com.pdm.basead.utils.manager.ad.AdInterstitialManager
-import com.pdm.basead.utils.manager.ad.AdNativeManager
-import com.pdm.basead.utils.manager.ad.AdRewardManager
-import com.pdm.basead.utils.manager.file.FileManager
+import com.pdm.basead.ui.ads.AdKeyPosition
+import com.pdm.basead.manager.ad.AdBannerManager
+import com.pdm.basead.manager.ad.AdInterstitialManager
+import com.pdm.basead.manager.ad.AdNativeManager
+import com.pdm.basead.manager.ad.AdRewardManager
+import com.pdm.basead.manager.file.FileManager
 import gs.ad.utils.ads.AdmManager
 import gs.ad.utils.ads.OnAdmListener
 import gs.ad.utils.ads.TYPE_ADS
@@ -306,7 +306,7 @@ abstract class BaseActivity : AppCompatActivity() {
         layoutNativeAd: Int = R.layout.layout_native_ad,
         isApplyNow: Boolean = false,
 
-    ) {
+        ) {
         adNativeManager.mApplyNativeAd(native, layoutNativeAd, isApplyNow)
     }
     //endregion

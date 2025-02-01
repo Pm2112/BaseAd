@@ -3,7 +3,7 @@ package com.pdm.basead.ui
 import android.os.Bundle
 import android.view.View
 import com.pdm.basead.databinding.ActivitySampleBinding
-import com.pdm.basead.utils.base.BaseActivity
+import com.pdm.basead.base.BaseActivity
 
 class SampleActivity : BaseActivity() {
     private var _binding: ActivitySampleBinding? = null

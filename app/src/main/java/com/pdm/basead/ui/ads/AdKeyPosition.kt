@@ -1,4 +1,4 @@
-package com.pdm.basead.utils.ads
+package com.pdm.basead.ui.ads
 
 enum class AdKeyPosition {
     //region APP

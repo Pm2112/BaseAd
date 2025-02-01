@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.pdm.basead.utils.ads.AdKeyPosition
+import com.pdm.basead.ui.ads.AdKeyPosition
 import com.pdm.basead.databinding.ActivityMainBinding
 import com.pdm.basead.ui.home.HomeActivity
 import com.pdm.basead.ui.test.TestActivity
-import com.pdm.basead.utils.base.BaseActivity
+import com.pdm.basead.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

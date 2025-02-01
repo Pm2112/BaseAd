@@ -1,4 +1,4 @@
-package com.pdm.basead.utils
+package com.pdm.basead.base
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -1,11 +1,11 @@
-package com.pdm.basead.utils.manager.ad
+package com.pdm.basead.manager.ad
 
 import androidx.activity.result.ActivityResult
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.pdm.basead.R
-import com.pdm.basead.utils.ads.AdKeyPosition
+import com.pdm.basead.ui.ads.AdKeyPosition
 import gs.ad.utils.ads.AdmManager
 import gs.ad.utils.ads.TYPE_ADS
 

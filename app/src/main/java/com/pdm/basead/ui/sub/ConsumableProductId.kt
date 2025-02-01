@@ -1,4 +1,4 @@
-package com.pdm.basead.utils.sub
+package com.pdm.basead.ui.sub
 
 enum class ConsumableProductId(val id: String) {
     Lifetime("lifetime")

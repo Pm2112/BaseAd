@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.pdm.basead.utils.ads.AdKeyPosition
+import com.pdm.basead.ui.ads.AdKeyPosition
 import com.pdm.basead.databinding.ActivitySplashBinding
 import com.pdm.basead.ui.onboard.OnBoardActivity
 import gs.ad.utils.ads.AdmManager

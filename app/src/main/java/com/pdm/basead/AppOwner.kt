@@ -1,9 +1,9 @@
 package com.pdm.basead
 
 import androidx.multidex.MultiDexApplication
-import com.pdm.basead.utils.ads.AdKeyPosition
-import com.pdm.basead.utils.sub.ConsumableProductId
-import com.pdm.basead.utils.sub.SubscriptionProductId
+import com.pdm.basead.ui.ads.AdKeyPosition
+import com.pdm.basead.ui.sub.ConsumableProductId
+import com.pdm.basead.ui.sub.SubscriptionProductId
 import dagger.hilt.android.HiltAndroidApp
 import gs.ad.utils.ads.AdmBuilder
 import gs.ad.utils.ads.AdmConfig

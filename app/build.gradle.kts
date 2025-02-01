@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
 }
 
@@ -73,10 +72,6 @@ dependencies {
 
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.12")
 
-    // Dagger Hilt
-    implementation("com.google.dagger:hilt-android:2.52")
-    kapt("com.google.dagger:hilt-android-compiler:2.52")
-
     // Retrofit và Converter Gson
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
@@ -84,13 +79,6 @@ dependencies {
     // OkHttp và Logging Interceptor
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
-
-    // Room dependencies
-    implementation("androidx.room:room-runtime:2.5.0")
-    kapt("androidx.room:room-compiler:2.5.0")
-
-    // Kotlin Coroutines Support for Room (optional, nếu dùng Coroutines với Room)
-    implementation("androidx.room:room-ktx:2.5.0")
 
     // Test
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")

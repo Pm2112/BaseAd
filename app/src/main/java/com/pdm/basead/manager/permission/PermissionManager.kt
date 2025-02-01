@@ -1,4 +1,4 @@
-package com.pdm.basead.utils.manager.permission
+package com.pdm.basead.manager.permission
 
 import android.content.Context
 import android.content.pm.PackageManager
