@@ -12,12 +12,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.pdm.basead.databinding.ActivityHomeBinding
-import com.pdm.basead.manager.FileManager
 import com.pdm.basead.ui.ads.AdKeyPosition
 import com.pdm.basead.base.BaseActivity
-import dagger.hilt.android.AndroidEntryPoint
+import com.pdm.basead.base.manager.file.FileManager
 
-@AndroidEntryPoint
 class HomeActivity : BaseActivity() {
     private val tag = "DebugHomeActivity"
 
@@ -63,14 +61,13 @@ class HomeActivity : BaseActivity() {
         showAdNative(Pair(AdKeyPosition.NATIVE_AD_SC_DASHBOARD, binding.containerNativeAd))
 
         binding.btnGetFile.setOnClickListener {
-            val intent = FileManager.createFilePickerIntent()
-            filePickerLauncher.launch(intent)
+//            val intent = FileManager.createFilePickerIntent()
+//            filePickerLauncher.launch(intent)
         }
 
         val bottomSheet = EventBottomSheet.newInstance()
         preloadNativeAd(Pair(AdKeyPosition.NATIVE_AD_SC_HOME_1, bottomSheet))
         binding.btnSendFile.setOnClickListener {
-            homeViewModel.postFile(contentResolver)
             val fragmentManager = supportFragmentManager
             val existingFragment = fragmentManager.findFragmentByTag("EventBottomSheet")
             if (existingFragment == null) {

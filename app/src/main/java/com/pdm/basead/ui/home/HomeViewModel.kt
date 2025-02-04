@@ -8,14 +8,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm.basead.audd.AudD
-import com.pdm.basead.network.NetworkRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val networkRepository: NetworkRepository
 ) : ViewModel() {
     private val tag = "DebugHomeViewModel"
 
@@ -26,19 +22,5 @@ class HomeViewModel @Inject constructor(
         _filePath.value = filePath
     }
 
-    fun postFile(contentResolver: ContentResolver) {
-        viewModelScope.launch {
-            try {
-                val (url, partMap, file) = AudD.configSendFile(filePath.value!!, contentResolver)
-                val response = networkRepository.postMultipartData<String>(
-                    url,
-                    partMap,
-                    file
-                )
-                Log.d(tag, "Response: ${response.body()}")
-            } catch (e: Exception) {
-                Log.e(tag, "Error fetching data: ${e.message}")
-            }
-        }
-    }
+
 }

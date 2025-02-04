@@ -1,4 +1,4 @@
-package com.pdm.basead.manager.file
+package com.pdm.basead.base.manager.file
 
 import android.app.Activity
 import android.content.ContentResolver

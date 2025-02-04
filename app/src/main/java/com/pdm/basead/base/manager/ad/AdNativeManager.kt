@@ -1,4 +1,4 @@
-package com.pdm.basead.manager.ad
+package com.pdm.basead.base.manager.ad
 
 import androidx.activity.result.ActivityResult
 import androidx.constraintlayout.widget.ConstraintLayout

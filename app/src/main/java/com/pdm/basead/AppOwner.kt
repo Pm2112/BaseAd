@@ -4,13 +4,11 @@ import androidx.multidex.MultiDexApplication
 import com.pdm.basead.ui.ads.AdKeyPosition
 import com.pdm.basead.ui.sub.ConsumableProductId
 import com.pdm.basead.ui.sub.SubscriptionProductId
-import dagger.hilt.android.HiltAndroidApp
 import gs.ad.utils.ads.AdmBuilder
 import gs.ad.utils.ads.AdmConfig
 import gs.ad.utils.google_iab.BillingClientLifecycle
 import gs.ad.utils.utils.GlobalVariables
 
-@HiltAndroidApp
 class AppOwner : MultiDexApplication() {
     lateinit var mAdmBuilder: AdmBuilder
     lateinit var mBillingClientLifecycle: BillingClientLifecycle

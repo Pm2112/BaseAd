@@ -1,4 +1,4 @@
-package com.pdm.basead.manager.ad
+package com.pdm.basead.base.manager.ad
 
 import android.content.Context
 import com.pdm.basead.ui.ads.AdKeyPosition

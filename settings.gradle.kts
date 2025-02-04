@@ -23,4 +23,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BaseAd"
 include(":app")
- 
+include(":adbaselib")

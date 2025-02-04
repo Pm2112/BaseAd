@@ -10,9 +10,7 @@ import com.pdm.basead.databinding.ActivityMainBinding
 import com.pdm.basead.ui.home.HomeActivity
 import com.pdm.basead.ui.test.TestActivity
 import com.pdm.basead.base.BaseActivity
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : BaseActivity() {
     private val tag = "DebugMainActivity"
 

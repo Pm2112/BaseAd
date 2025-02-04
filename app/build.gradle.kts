@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "anime.girlfriend.app"
+        applicationId = "com.pdm.basead"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -85,7 +85,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
     androidTestImplementation("androidx.test:rules:1.5.0")
     androidTestImplementation("androidx.test:runner:1.5.2")
-
 
     // Ads
     implementation("com.github.ongan1234:gs_ad:1.0.7")

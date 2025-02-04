@@ -9,10 +9,6 @@ import androidx.activity.ComponentActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.pdm.basead.ui.ads.AdKeyPosition
 import com.pdm.basead.databinding.FragmentEventBottomSheetBinding
-import dagger.hilt.android.AndroidEntryPoint
-import gs.ad.utils.ads.TYPE_ADS
-
-@AndroidEntryPoint
 class EventBottomSheet : BottomSheetDialogFragment() {
     private var _binding: FragmentEventBottomSheetBinding? = null
     private val binding get() = _binding!!

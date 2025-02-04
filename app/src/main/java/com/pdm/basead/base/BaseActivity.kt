@@ -16,13 +16,12 @@ import androidx.fragment.app.Fragment
 import com.pdm.basead.AppOwner
 import com.pdm.basead.MainActivity
 import com.pdm.basead.R
-import com.pdm.basead.SubscriptionActivity
 import com.pdm.basead.ui.ads.AdKeyPosition
-import com.pdm.basead.manager.ad.AdBannerManager
-import com.pdm.basead.manager.ad.AdInterstitialManager
-import com.pdm.basead.manager.ad.AdNativeManager
-import com.pdm.basead.manager.ad.AdRewardManager
-import com.pdm.basead.manager.file.FileManager
+import com.pdm.basead.base.manager.ad.AdBannerManager
+import com.pdm.basead.base.manager.ad.AdInterstitialManager
+import com.pdm.basead.base.manager.ad.AdNativeManager
+import com.pdm.basead.base.manager.ad.AdRewardManager
+import com.pdm.basead.base.manager.file.FileManager
 import gs.ad.utils.ads.AdmManager
 import gs.ad.utils.ads.OnAdmListener
 import gs.ad.utils.ads.TYPE_ADS
@@ -312,8 +311,7 @@ abstract class BaseActivity : AppCompatActivity() {
     //endregion
 
     //region Subscription
-    protected fun openSubscriptionActivity() {
-        val intent = Intent(this, SubscriptionActivity::class.java)
+    protected fun openSubscriptionActivity(intent: Intent) {
         subscriptionLauncher.launch(intent)
     }
 
