@@ -72,6 +72,9 @@ dependencies {
 
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.12")
 
+    // Ffmpeg
+    implementation("com.arthenica:ffmpeg-kit-full:6.0")
+
     // Retrofit và Converter Gson
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")

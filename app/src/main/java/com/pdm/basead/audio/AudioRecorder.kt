@@ -1,90 +1,91 @@
-//package com.pdm.basead.audio
-//
-//import android.media.MediaRecorder
-//import android.os.Environment
-//import android.util.Log
-//import java.io.File
-//import java.io.IOException
-//
-//class AudioRecorder {
-//    private val tag = "DebugAudioRecorder"
-//    private var mediaRecorder: MediaRecorder? = null
-//    private var audioFile: File? = null
-//    private var isRecording = false
-//
-//    @Throws(IOException::class)
-//    fun startRecording(outputFile: File): File {
-//        if (isRecording) {
-//            throw IllegalStateException("Recording is already in progress")
-//        }
-//
-//        // Đặt file đầu ra
-//        audioFile = outputFile
-//
-//        // Kiểm tra phiên bản API và sử dụng MediaRecorder tương thích với tất cả các phiên bản
-//        mediaRecorder = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
-//            // MediaRecorder.Builder chỉ có trên API 31 trở lên
-//            try {
-//                MediaRecorder.Builder()
-//                    .setAudioSource(MediaRecorder.AudioSource.MIC)
-//                    .setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
-//                    .setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
-//                    .setOutputFile(audioFile?.absolutePath)
-//                    .build()
-//            } catch (e: Exception) {
-//                throw IOException("Lỗi khi khởi tạo MediaRecorder Builder: ${e.message}")
-//            }
-//        } else {
-//            // Cách này sẽ hoạt động trên các phiên bản API cũ hơn
-//            MediaRecorder().apply {
-//                setAudioSource(MediaRecorder.AudioSource.MIC)
-//                setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
-//                setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
-//                setOutputFile(audioFile?.absolutePath)
-//            }
-//        }
-//
-//        try {
-//            mediaRecorder?.prepare()
-//            mediaRecorder?.start()
-//        } catch (e: Exception) {
-//            throw IOException("Lỗi khi bắt đầu ghi âm: ${e.message}")
-//        }
-//
-//        isRecording = true
-//        return audioFile ?: throw IOException("Không thể tạo file đầu ra")
-//    }
-//
-//    // Stop recording
-//    fun stopRecording(): File? {
-//        if (!isRecording) {
-//            throw IllegalStateException("Recording is not in progress")
-//        }
-//
-//        try {
-//            mediaRecorder?.apply {
-//                stop()
-//                release()
-//            }
-//        } catch (e: IllegalStateException) {
-//            // Handle invalid MediaRecorder state
-//            Log.e(tag, "Illegal state while stopping recording: ${e.message}")
-//        } catch (e: IOException) {
-//            // Handle I/O errors
-//            Log.e(tag, "I/O error while stopping recording: ${e.message}")
-//        } catch (e: SecurityException) {
-//            // Handle security issues (e.g., missing microphone permissions)
-//            Log.e(tag, "Security error while stopping recording: ${e.message}")
-//        } finally {
-//            mediaRecorder = null
-//            isRecording = false
-//        }
-//
-//        return audioFile
-//    }
-//
-//    // Check if recording is active
-//    fun isRecording(): Boolean {
-//        return isRecording
-//    }
-//}
+package com.pdm.basead.audio
+
+import android.media.AudioFormat
+import android.media.AudioRecord
+import android.media.MediaRecorder
+import android.util.Log
+import androidx.activity.ComponentActivity
+import java.io.File
+
+class AudioRecorder(private val activity: ComponentActivity) {
+    private var audioRecord: AudioRecord? = null
+    private var isRecording = false
+    private val audioData = mutableListOf<Byte>()
+
+    private val permissionHandler = PermissionHandler(activity)
+    private val audioSaver = AudioSaver()
+
+    companion object {
+        private const val TAG = "AudioRecorder"
+        private const val SAMPLE_RATE = 44100
+    }
+
+    /**
+     * Bắt đầu ghi âm (xin quyền nếu chưa cấp)
+     */
+    fun startRecording() {
+        if (isRecording) {
+            Log.w(TAG, "Đã bắt đầu ghi âm, không thể ghi lại.")
+            return
+        }
+
+        permissionHandler.checkAudioPermission {
+            audioRecord = AudioRecord(
+                MediaRecorder.AudioSource.MIC,
+                SAMPLE_RATE,
+                AudioFormat.CHANNEL_IN_MONO,
+                AudioFormat.ENCODING_PCM_16BIT,
+                AudioRecord.getMinBufferSize(SAMPLE_RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT)
+            )
+
+            audioRecord?.startRecording()
+            isRecording = true
+
+            Thread {
+                val buffer = ByteArray(1024)
+                while (isRecording) {
+                    val read = audioRecord?.read(buffer, 0, buffer.size) ?: 0
+                    if (read > 0) {
+                        synchronized(audioData) {
+                            audioData.addAll(buffer.take(read))
+                        }
+                    }
+                }
+            }.start()
+
+            Log.d(TAG, "Đã bắt đầu ghi âm.")
+        }
+    }
+
+    /**
+     * Dừng ghi âm
+     */
+    fun stopRecording() {
+        if (!isRecording) return
+
+        isRecording = false
+        audioRecord?.apply {
+            stop()
+            release()
+        }
+        audioRecord = null
+        Log.d(TAG, "Đã dừng ghi âm.")
+    }
+
+    /**
+     * Lưu file ghi âm với nhiều định dạng (PCM, WAV, MP3)
+     */
+    fun saveRecording(file: File, format: AudioFormatType) {
+        audioSaver.saveAudio(file, format, audioData)
+    }
+
+    /**
+     * Hủy dữ liệu ghi âm tạm thời (không lưu)
+     */
+    fun discardRecording() {
+        synchronized(audioData) { audioData.clear() }
+        Log.d(TAG, "Đã hủy dữ liệu ghi âm.")
+    }
+
+    fun isRecording(): Boolean = isRecording
+}
